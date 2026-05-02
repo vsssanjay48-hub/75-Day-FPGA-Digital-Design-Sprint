@@ -1,0 +1,14 @@
+# Icarus Verilog outputs
+*.vvp
+*.out
+
+# GTKWave dumps (DO NOT PUSH THESE)
+*.vcd
+*.ghw
+
+# Vivado artifacts (for Phase 2)
+*.jou
+*.log
+*.pb
+*.wdb
+.Xil/
