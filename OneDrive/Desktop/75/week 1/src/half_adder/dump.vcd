@@ -1,0 +1,83 @@
+$date
+	Fri May 22 18:42:21 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_half_adder $end
+$var wire 1 ! y $end
+$var wire 1 " carry $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$scope module uut1 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " carry $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 ! y $end
+$var wire 1 % not_b $end
+$var wire 1 & not_a $end
+$var wire 1 ' and2_gate $end
+$var wire 1 ( and1_gate $end
+$scope module and1 $end
+$var wire 1 $ b $end
+$var wire 1 ( y $end
+$var wire 1 & a $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 # a $end
+$var wire 1 ' y $end
+$var wire 1 % b $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 # a $end
+$var wire 1 & y $end
+$upscope $end
+$scope module not2 $end
+$var wire 1 $ a $end
+$var wire 1 % y $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 ( a $end
+$var wire 1 ' b $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+1&
+1%
+0$
+0#
+0"
+0!
+$end
+#10000000000000
+1!
+1(
+0%
+1$
+#20000000000000
+1'
+0(
+1%
+0&
+0$
+1#
+#30000000000000
+0!
+0'
+1"
+0%
+1$
+#40000000000000
