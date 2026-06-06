@@ -1,0 +1,71 @@
+$date
+	Thu Jun 04 01:22:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_bit4 $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # load $end
+$var reg 4 $ parallel_in [3:0] $end
+$var reg 1 % rst $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # load $end
+$var wire 4 & parallel_in [3:0] $end
+$var wire 1 % rst $end
+$var reg 4 ' q [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx '
+b0 &
+0%
+b0 $
+x#
+0"
+bx !
+$end
+#2
+1%
+#5
+b0 !
+b0 '
+1"
+#6
+0%
+#10
+0"
+#12
+b101 $
+b101 &
+1#
+#15
+b101 !
+b101 '
+1"
+#20
+0"
+#22
+b10 $
+b10 &
+0#
+#25
+1"
+#30
+0"
+#35
+1"
+#40
+0"
+#45
+1"
+#50
+0"
+#52
