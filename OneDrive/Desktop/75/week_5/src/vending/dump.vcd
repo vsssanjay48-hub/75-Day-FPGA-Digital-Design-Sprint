@@ -1,0 +1,155 @@
+$date
+	Thu Jun 18 01:32:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_vending $end
+$var wire 1 ! dispenceo $end
+$var reg 1 " clk $end
+$var reg 1 # coin_10p $end
+$var reg 1 $ coin_25p $end
+$var reg 1 % coin_5p $end
+$var reg 1 & rst $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # coin_10p $end
+$var wire 1 $ coin_25p $end
+$var wire 1 % coin_5p $end
+$var wire 1 & rst $end
+$var reg 6 ' balance [5:0] $end
+$var reg 1 ! dispenceo $end
+$var reg 2 ( st [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx (
+bx '
+0&
+x%
+x$
+x#
+0"
+x!
+$end
+#3
+1&
+#5
+b0 (
+0!
+b0 '
+1"
+#6
+1$
+1#
+1%
+0&
+#10
+0"
+#15
+b1 (
+1"
+#20
+0"
+#25
+b101 '
+1"
+#30
+0"
+#35
+b1010 '
+1"
+#40
+0"
+#45
+b1111 '
+1"
+#50
+0"
+#55
+b10100 '
+1"
+#60
+0"
+#65
+b11001 '
+1"
+#70
+0"
+#75
+b11110 '
+1"
+#80
+0"
+#85
+b10 (
+b0 '
+1"
+#90
+0"
+#95
+b0 (
+1!
+1"
+#100
+0"
+#105
+b1 (
+1"
+#110
+0"
+#115
+b101 '
+1"
+#120
+0"
+#125
+b1010 '
+1"
+#130
+0"
+#135
+b1111 '
+1"
+#140
+0"
+#145
+b10100 '
+1"
+#150
+0"
+#155
+b11001 '
+1"
+#160
+0"
+#165
+b11110 '
+1"
+#170
+0"
+#175
+b10 (
+b0 '
+1"
+#180
+0"
+#185
+b0 (
+1"
+#190
+0"
+#195
+b1 (
+1"
+#200
+0"
+#205
+b101 '
+1"
+#206
