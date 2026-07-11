@@ -1,0 +1,83 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001ffb595bb50 .scope module, "tb_baud" "tb_baud" 2 1;
+ .timescale 0 0;
+v000001ffb595bd80_0 .net "baud_tick", 0 0, L_000001ffb57b6c40;  1 drivers
+v000001ffb57b6b00_0 .var "clk", 0 0;
+v000001ffb57b6ba0_0 .var "rst", 0 0;
+S_000001ffb57b6970 .scope module, "uut" "rx_baud_gen" 2 5, 3 1 0, S_000001ffb595bb50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /OUTPUT 1 "baud_tick";
+L_000001ffb57fd428 .functor BUFT 1, C4<101000101>, C4<0>, C4<0>, C4<0>;
+v000001ffb5783250_0 .net/2u *"_ivl_0", 8 0, L_000001ffb57fd428;  1 drivers
+v000001ffb5782c80_0 .var "baud_count", 8 0;
+v000001ffb595aa30_0 .net "baud_tick", 0 0, L_000001ffb57b6c40;  alias, 1 drivers
+v000001ffb59582f0_0 .net "clk", 0 0, v000001ffb57b6b00_0;  1 drivers
+v000001ffb595bce0_0 .net "rst", 0 0, v000001ffb57b6ba0_0;  1 drivers
+E_000001ffb595cde0 .event posedge, v000001ffb59582f0_0;
+L_000001ffb57b6c40 .cmp/eq 9, v000001ffb5782c80_0, L_000001ffb57fd428;
+    .scope S_000001ffb57b6970;
+T_0 ;
+    %wait E_000001ffb595cde0;
+    %load/vec4 v000001ffb595bce0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 9;
+    %assign/vec4 v000001ffb5782c80_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v000001ffb595aa30_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %pushi/vec4 0, 0, 9;
+    %assign/vec4 v000001ffb5782c80_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v000001ffb5782c80_0;
+    %addi 1, 0, 9;
+    %assign/vec4 v000001ffb5782c80_0, 0;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_000001ffb595bb50;
+T_1 ;
+    %delay 10, 0;
+    %load/vec4 v000001ffb57b6b00_0;
+    %inv;
+    %store/vec4 v000001ffb57b6b00_0, 0, 1;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_000001ffb595bb50;
+T_2 ;
+    %vpi_call 2 10 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001ffb595bb50 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001ffb57b6ba0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001ffb57b6b00_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001ffb57b6ba0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001ffb57b6ba0_0, 0, 1;
+    %delay 1000, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_baud.v";
+    "./rx_baud_gen.v";
