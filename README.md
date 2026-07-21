@@ -7,7 +7,7 @@ Verilog HDL, and FPGA-based system design — built from scratch before 2nd year
 
 ## Overview
 
-[![Project Overview](https://drive.google.com/uc?export=view&id=1lQNDX6ypPuTn9cnpQLewtbdfkbK6n1vL)](https://drive.google.com/file/d/1bXxQNqFAXtvyJbDncDagC2EPCDllQ6QE/view?usp=sharing)
+[![Project Overview](docs/overview.jpg)](https://drive.google.com/file/d/1bXxQNqFAXtvyJbDncDagC2EPCDllQ6QE/view?usp=sharing)
 
 > Progressed through gates → adders → FSMs → UART → FIFO, simulating every module  
 > in Icarus Verilog + GTKWave before transitioning to Xilinx Vivado for synthesis.
